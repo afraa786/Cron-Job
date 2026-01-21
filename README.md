@@ -1,16 +1,66 @@
-# frontend
+# Cron Job Notification System – Spring Boot
 
-A new Flutter project.
+This project implements a **cron-based notification and reminder system** using Spring Boot.
 
-## Getting Started
+It allows scheduling automated tasks such as reminders and notifications using Spring’s `@Scheduled` annotation.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Cron job scheduling using Spring Boot  
+- Automated reminder / notification system  
+- REST APIs to create and manage reminders  
+- Database-backed storage for scheduled reminders  
+- Clean layered architecture:
+  - Controller  
+  - Service  
+  - Repository  
+  - Scheduler  
+- Easily extensible for:
+  - Email notifications  
+  - SMS alerts  
+  - Push notifications  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Tech Stack
+
+### Backend
+- Java  
+- Spring Boot  
+- Spring Scheduler (`@Scheduled`)  
+- Spring Data JPA  
+- Maven  
+- H2 / MySQL (configurable)  
+
+### Frontend
+- Flutter  
+
+---
+
+
+## How Cron Works in This Project
+
+- Cron jobs are defined using Spring’s `@Scheduled` annotation  
+- Jobs execute automatically based on:
+  - Fixed intervals  
+  - Cron expressions  
+
+### Example Use Cases
+- Medicine reminders  
+- Task notifications  
+- Scheduled alerts  
+- Background cleanup jobs  
+
+---
+
+## Running the Backend
+
+Run using Maven Wrapper:
+
+```bash
+cd backend
+./mvnw spring-boot:run
+
+
